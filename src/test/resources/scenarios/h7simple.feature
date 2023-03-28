@@ -1,7 +1,6 @@
-#laguage: ru
 Feature: Домашнее задание №7
 
-    Background: Я нахожусь на главной странице сайта
+  Background: Я нахожусь на главной странице сайта
     Given Открываем сайт "https://www.onliner.by/"
 
   Scenario: Сценарий №1

@@ -5,6 +5,7 @@ import io.cucumber.java.en.When;
 import org.assertj.core.api.Assertions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static helpers.CatalogHelper.*;
 
@@ -22,7 +23,7 @@ public class HomeTest {
         //given
         String sell = "Продажа";
         String arenda = "Аренда";
-        ArrayList<String> homeItems = new ArrayList<>();
+        List<String> homeItems = new ArrayList<>();
         homeItems.add("Минск");
         homeItems.add("Брест");
         homeItems.add("Витебск");
@@ -37,7 +38,7 @@ public class HomeTest {
         homeItems.add("30 000–80 000 $");
         homeItems.add("От 80 000 $");
 
-        ArrayList<String> arendaItems = new ArrayList<>();
+        List<String> arendaItems = new ArrayList<>();
         arendaItems.add("Минск");
         arendaItems.add("Брест");
         arendaItems.add("Витебск");
@@ -57,6 +58,5 @@ public class HomeTest {
         //then
         Assertions.assertThat(getItems(sell).containsAll(homeItems)).isTrue();
         Assertions.assertThat(getItems(arenda).containsAll(arendaItems)).isTrue();
-
     }
 }
